@@ -1,0 +1,15 @@
+<div class = "col-md-3 col-xs-12">
+  <div class="card" style="margin-bottom: 15px;">
+    <%= image_tag 'background.jpg', class: 'card-img-top' %>
+    <div class="card-body">
+      <h4 class="card-title"><i class="fa fa-comments-o" aria-hidden="true"></i> <%= chat_room.title %></h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><%= link_to chat_room_path(chat_room) do%>
+        <i class="fa fa-sign-in" aria-hidden="true"></i> Enter Room
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
