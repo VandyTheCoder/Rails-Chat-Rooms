@@ -21,41 +21,41 @@
     <%= link_to root_path, class: 'navbar-brand' do%>
       <i class="fa fa-comments" aria-hidden="true"></i> CS-Chat Rooms
     <% end %>
-    <% if user_signed_in? %>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown active">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-user-circle-o" aria-hidden="true"></i> <%= current_user.name %>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <%= link_to new_chat_room_path, class: 'dropdown-item' do%>
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> Create New Room
-            <% end %>
-            <%= link_to destroy_user_session_path, method: :delete, class: 'dropdown-item' do %>
-              <i class="fa fa-power-off" aria-hidden="true"></i> Log Out
-            <% end %>
-          </div>
-        </li>
-      </ul>
+      <% if user_signed_in? %>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user-circle-o" aria-hidden="true"></i> <%= current_user.name %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <%= link_to new_chat_room_path, class: 'dropdown-item' do%>
+                <i class="fa fa-plus-circle" aria-hidden="true"></i> Create New Room
+              <% end %>
+              <%= link_to destroy_user_session_path, method: :delete, class: 'dropdown-item' do %>
+                <i class="fa fa-power-off" aria-hidden="true"></i> Log Out
+              <% end %>
+            </div>
+          </li>
+        </ul>
+
+      <% else %>
+
+        <ul class="navbar-nav ml-auto" style="color: white">Nhean & Kanitha</ul>
+
+      <% end %>
     </div>
 
-    <% end %>
   </nav>
 
   <div class="container-fluid">
     <%= yield %>
   </div>
 
-  <footer>
-    <div class="container-fluid">
-      <p class="text-muted">Created by Nhean</p>
-    </div>
-  </footer>
 </body>
 </html>

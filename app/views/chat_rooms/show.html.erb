@@ -1,5 +1,5 @@
-<h1><%= @chat_room.title %></h1>
-
+<h2><%= @chat_room.title %></h2>
+<hr>
 <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
   <%= render @chat_room.messages %>
 </div>
@@ -14,5 +14,5 @@
     <small class="text-muted">From 2 to 1000 characters</small>
   </div>
 
-  <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
+  <%= f.submit "Post", class: 'btn btn-info' %>
 <% end %>

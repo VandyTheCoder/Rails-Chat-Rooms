@@ -31,3 +31,29 @@ h1
 footer {
   margin-top: 50px;
 }
+
+.card-body
+{
+  & > a
+  {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+#login-submit:hover
+{
+  color: #555555;
+}
+
+.jumbotron
+{
+  background-image: url("bac-login.jpg");
+  background-color: #17234E;
+  margin-bottom: 0;
+  min-height: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
