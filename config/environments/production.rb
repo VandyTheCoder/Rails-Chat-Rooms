@@ -13,7 +13,6 @@ Rails.application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
@@ -86,8 +85,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_cable.allowed_request_origins = ['https://sitepoint-actioncable.herokuapp.com',
-                                                 'http://sitepoint-actioncable.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://cs-chats.herokuapp.com/',
+                                                 'http://cs-chats.herokuapp.com/']                                               
 
-  config.action_cable.url = "wss://sitepoint-actioncable.herokuapp.com/cable"
+  config.action_cable.url = "wss://cs-chats-actioncable.herokuapp.com/cable"
 end
