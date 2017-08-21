@@ -1,11 +1,16 @@
 .card
   .card-block
-    .col-md-1
-      = gravatar_for message.user
-    .col-md-11
-      %span.text-muted
-        = message.user.name
-        at #{message.timestamp} says
-      %p.card-text
-        = message.body
+    .container
+      .row
+        .col-md-1{style: 'padding-top: 5px'}
+          = gravatar_for message.user
+        .col-md-11
+          %span.text-muted
+            = message.user.name
+          %br
+          %span.text-muted
+            = message.timestamp
+          %hr
+          %p.card-text{style: 'margin-bottom: 15px'}
+            = message.body
 %br/
