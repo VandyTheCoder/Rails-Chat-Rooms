@@ -1,0 +1,32 @@
+.row
+  .col-md-3.col-xs-12{:style => "margin-bottom: 15px;"}
+    .card.text-white.bg-info
+      .card-header
+        %i.fa.fa-sign-in{"aria-hidden" => "true"}
+        Log In
+      .card-body
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .form-group
+            = f.label :email
+            = f.email_field :email, autofocus: true, class: 'form-control'
+          .form-group
+            = f.label :password
+            = f.password_field :password, autocomplete: "off", class: 'form-control'
+          - if devise_mapping.rememberable?
+            .form-group
+              = f.check_box :remember_me
+              = f.label :remember_me
+          = f.submit 'Log In ',class: 'btn btn-outline-light', id: 'login-submit'
+        %br
+          = render "devise/shared/links"
+  .col-md-9.col-xs-12
+    .card.bg-dark.text-white{:style => "border: none"}
+      = image_tag 'bac-login.jpg', class: 'card-img'
+    .card-img-overlay
+      %h1.card-title{:style => "color: white"} Hello, Guys!
+      %br
+        %p.card-text We are developers. Our site was developed by using Rails 5. It might be bugs. We are sorry for inconvenient and we will try our best to develope it.
+        %hr
+          %p.card-text The CS-Chat Rooms is developed for Computer Science Students. It can help you guys explore about the chat rooms that talk about this Computer Science.
+          %p.card-text By Nhean  Kanitha
+          %span.badge.badge-success Everything is Public

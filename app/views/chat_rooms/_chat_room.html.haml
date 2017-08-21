@@ -1,0 +1,13 @@
+.col-md-3.col-xs-12
+  .card{:style => "margin-bottom: 15px;"}
+    = image_tag 'background.jpg', class: 'card-img-top'
+    .card-body
+      %h4.card-title
+        %i.fa.fa-comments-o{"aria-hidden" => "true"}
+        = chat_room.title
+      %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    %ul.list-group.list-group-flush
+      %li.list-group-item
+        = link_to chat_room_path(chat_room) do
+          %i.fa.fa-sign-in{"aria-hidden" => "true"}
+          Enter Room
