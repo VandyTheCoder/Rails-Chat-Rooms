@@ -15,6 +15,9 @@
             = link_to new_chat_room_path, class: 'dropdown-item' do
               %i.fa.fa-plus-circle{"aria-hidden" => "true"}
               Create New Room
+            = link_to edit_user_registration_path(current_user), class: 'dropdown-item' do
+              %i.fa.fa-user-circle{"aria-hidden" => "true"}
+              Edit Account
             = link_to destroy_user_session_path, method: :delete, class: 'dropdown-item' do
               %i.fa.fa-power-off{"aria-hidden" => "true"}
               Log Out

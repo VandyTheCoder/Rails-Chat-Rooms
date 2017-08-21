@@ -1,11 +1,16 @@
 .col-md-3.col-xs-12
-  .card{:style => "margin-bottom: 15px;"}
+  .card{:style => "margin-bottom: 15px; height: 400px"}
     = image_tag 'background.jpg', class: 'card-img-top'
     .card-body
       %h4.card-title
         %i.fa.fa-comments-o{"aria-hidden" => "true"}
         = chat_room.title
-      %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+
+      - if chat_room.description.present?
+        %p.card-text= chat_room.description 
+      - else
+        %p.card-text Thanks you for using our cs-chat room service. Please enjoy our free service. Please kindly share this to your friends.
+
     %ul.list-group.list-group-flush
       %li.list-group-item
         = link_to chat_room_path(chat_room) do
