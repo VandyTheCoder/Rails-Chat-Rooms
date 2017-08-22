@@ -22,6 +22,28 @@ class ChatRoomsController < ApplicationController
     @message = Message.new
   end
 
+  def edit
+    @chat_room = ChatRoom.find(params[:id])
+  end
+
+  def update
+    @chat_room = ChatRoom.find(params[:id])
+    if @chat_room.update(chat_room_params)
+      redirect_to @chat_room, notice: 'Chat Room was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @chat_room = ChatRoom.find(params[:id])
+    if @chat_room.destroy
+      redirect_to chat_rooms_path, notice: 'Chart Room was deleted successfully.'
+    else
+      redirect_to chat_rooms_path, notice: 'Chart Room was deleted unsuccessfully.'
+    end
+  end
+
   private
 
   def chat_room_params

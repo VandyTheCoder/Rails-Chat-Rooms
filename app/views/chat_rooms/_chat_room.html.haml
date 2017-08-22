@@ -1,7 +1,7 @@
 .col-md-3.col-xs-12
-  .card{:style => "margin-bottom: 15px; height: 400px"}
+  .card
     = image_tag 'background.jpg', class: 'card-img-top'
-    .card-body
+    .card-body{style: 'height: 200px'}
       %h4.card-title
         %i.fa.fa-comments-o{"aria-hidden" => "true"}
         = chat_room.title
@@ -10,9 +10,16 @@
         %p.card-text= chat_room.description 
       - else
         %p.card-text Thanks you for using our cs-chat room service. Please enjoy our free service. Please kindly share this to your friends.
+    .card-body{align: 'right'}
 
-    %ul.list-group.list-group-flush
-      %li.list-group-item
-        = link_to chat_room_path(chat_room) do
-          %i.fa.fa-sign-in{"aria-hidden" => "true"}
-          Enter Room
+      = link_to chat_room, class: 'card-link btn btn-info' do
+        %i.fa.fa-sign-in{"aria-hidden" => "true"}
+
+      -if current_user.is_admin? or chat_room.user.id == current_user.id
+        = link_to edit_chat_room_path(chat_room), class: 'card-link btn btn-success' do
+          %i.fa.fa-edit{"aria-hidden" => "true"}
+
+        = link_to chat_room, method: :delete, data: { confirm: 'Are you sure?' },class: 'card-link btn btn-danger' do
+          %i.fa.fa-trash{"aria-hidden" => "true"}
+
+

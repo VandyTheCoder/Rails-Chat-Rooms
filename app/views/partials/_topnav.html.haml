@@ -10,7 +10,7 @@
         %li.nav-item.dropdown.active
           %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"}
             %i.fa.fa-user-circle-o{"aria-hidden" => "true"}
-            = current_user.name
+            = current_user.email
           .dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
             = link_to new_chat_room_path, class: 'dropdown-item' do
               %i.fa.fa-plus-circle{"aria-hidden" => "true"}
