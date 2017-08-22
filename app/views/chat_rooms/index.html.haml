@@ -1,20 +1,20 @@
 -if notice.present?
   .alert.alert-success{role: 'alert'}
     -if notice.eql? "Thanks for trying to test our security!"
-    %ul
-      %li= notice
-      %li
-        Is this
-        %i.fa.fa-map-marker{"aria-hidden" => "true"}
-        = request.remote_ip
-        = request.location.country
-        your IP Address?
-      %li
-        If not, You are cool!
-        %i.fa.fa-smile-o{"aria-hidden" => "true"}
-      %li
-        If yes, Try to study more! Cambodia Needs More Hacker!
-        %i.fa.fa-smile-o{"aria-hidden" => "true"}
+      %ul
+        %li= notice
+        %li
+          Is this
+          %i.fa.fa-map-marker{"aria-hidden" => "true"}
+          = request.remote_ip
+          = request.location.country
+          your IP Address?
+        %li
+          If not, You are cool!
+          %i.fa.fa-smile-o{"aria-hidden" => "true"}
+        %li
+          If yes, Try to study more! Cambodia Needs More Hacker!
+          %i.fa.fa-smile-o{"aria-hidden" => "true"}
     - else
       = notice
 .row
