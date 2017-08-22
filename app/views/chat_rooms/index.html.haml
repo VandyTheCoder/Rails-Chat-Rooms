@@ -2,7 +2,7 @@
   .alert.alert-success{role: 'alert'}
     %ul
       %li= notice
-      -if notice == "Signed in successfully."
+      -if notice.eql? "Thanks for trying to test our security!"
         %li
           Is this
           %i.fa.fa-map-marker{"aria-hidden" => "true"}
