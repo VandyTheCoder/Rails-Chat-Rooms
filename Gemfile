@@ -15,6 +15,7 @@ gem 'font-awesome-sass'
 gem 'haml-rails', '~> 1.0'
 gem 'simple_form', '~> 3.5'
 gem 'bootstrap', '~> 4.0.0.beta'
+gem 'geocoder'
 
 gem 'sqlite3', group: :development
 gem 'pg', '0.18.1', group: :production

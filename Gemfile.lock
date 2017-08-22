@@ -67,6 +67,7 @@ GEM
     execjs (2.7.0)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
+    geocoder (1.4.4)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     haml (5.0.2)
@@ -108,6 +109,7 @@ GEM
       pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
     pg (0.18.1)
+    pg (0.18.1-x86-mingw32)
     pkg-config (1.1.7)
     popper_js (1.11.1)
     pry (0.10.3)
@@ -207,6 +209,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   font-awesome-sass
+  geocoder
   haml-rails (~> 1.0)
   jquery-rails
   pg (= 0.18.1)

@@ -37,11 +37,16 @@ class ChatRoomsController < ApplicationController
 
   def destroy
     @chat_room = ChatRoom.find(params[:id])
-    if @chat_room.destroy
-      redirect_to chat_rooms_path, notice: 'Chart Room was deleted successfully.'
+    if current_user.is_admin? or @chat_room.user.id == current_user.id
+      if @chat_room.destroy
+        redirect_to chat_rooms_path, notice: 'Chart Room was deleted successfully.'
+      else
+        redirect_to chat_rooms_path, notice: 'Chart Room was deleted unsuccessfully.'
+      end
     else
-      redirect_to chat_rooms_path, notice: 'Chart Room was deleted unsuccessfully.'
+      redirect_to chat_rooms_path, notice: 'Thanks for trying to test our security!'
     end
+
   end
 
   private

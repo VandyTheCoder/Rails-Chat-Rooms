@@ -15,7 +15,7 @@
       = link_to chat_room, class: 'card-link btn btn-info' do
         %i.fa.fa-sign-in{"aria-hidden" => "true"}
 
-      -if current_user.is_admin? or chat_room.user.id == current_user.id
+      - if current_user.is_admin? or chat_room.user.id == current_user.id
         = link_to edit_chat_room_path(chat_room), class: 'card-link btn btn-success' do
           %i.fa.fa-edit{"aria-hidden" => "true"}
 
