@@ -13,4 +13,19 @@
             Back
 - else
   .alert.alert-success{role: 'alert'}
-    Thanks for trying to test our security!
+    %ul
+      %li Thanks for trying to test our security!
+      %li
+        Is this
+        %i.fa.fa-map-marker{"aria-hidden" => "true"}
+        = request.remote_ip
+        (
+        = request.location.country
+        )
+        your IP Address?
+      %li
+        If not, You are cool!
+        %i.fa.fa-smile-o{"aria-hidden" => "true"}
+      %li
+        If yes, Try to study more! Cambodia Needs More Hacker!
+        %i.fa.fa-smile-o{"aria-hidden" => "true"}
