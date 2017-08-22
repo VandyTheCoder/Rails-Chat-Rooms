@@ -2,17 +2,18 @@
   .alert.alert-success{role: 'alert'}
     %ul
       %li= notice
-      %li
-        Is this
-        %i.fa.fa-map-marker{"aria-hidden" => "true"}
-        = request.remote_ip
-        = request.location.city
-        your IP Address?
-      %li
-        If not, You are cool!
-        %i.fa.fa-smile-o{"aria-hidden" => "true"}
-      %li
-        If yes, Try to study more! Cambodia Needs More Hacker!
-        %i.fa.fa-smile-o{"aria-hidden" => "true"}
+      -if notice == "Signed in successfully."
+        %li
+          Is this
+          %i.fa.fa-map-marker{"aria-hidden" => "true"}
+          = request.remote_ip
+          = request.location.country
+          your IP Address?
+        %li
+          If not, You are cool!
+          %i.fa.fa-smile-o{"aria-hidden" => "true"}
+        %li
+          If yes, Try to study more! Cambodia Needs More Hacker!
+          %i.fa.fa-smile-o{"aria-hidden" => "true"}
 .row
   = render @chat_rooms
