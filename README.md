@@ -1,7 +1,7 @@
 <h1>CS Chat Room</h1>
-<p>Hi, I am a student majoring Computer Science
-/n I haved used the source of Chat Real Time Tutorial from <a href ="https://www.sitepoint.com/">sitepoint</a>.
+<p>Hi, I am a student majoring Computer Science. I haved used the source of Chat Real Time Tutorial from <a href ="https://www.sitepoint.com/">sitepoint</a>. 
 <p>
+<p>What I have updated are : </p>
 <ul>
   <li>Interface</li>
   <li>Security</li>
