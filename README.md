@@ -6,3 +6,13 @@
   <li>Interface</li>
   <li>Security</li>
 </ul>
+<p>What I have learned are : </p>
+<ul>
+  <li>Action Cable of Rails</li>
+  <li>Bootstrap 4.0.0beta</li>
+  <li>Deployment Web on <a href = "https://www.heroku.com">Heroku Server</a></li>
+</ul>
+<p>I have hosted the <a href = "http://cs-chats.herokuapp.com/">CS-Chat Room</a> on heroku sever. You sure might want to take a look.</p>
+<p>This the original source from <a href ="https://www.sitepoint.com/">sitepoint</a> : https://www.sitepoint.com/create-a-chat-app-with-rails-5-actioncable-and-devise/
+
+<h3>Thanks You Guys!</h3>
