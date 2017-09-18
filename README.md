@@ -31,4 +31,4 @@
 <p>I have hosted the <a href = "http://cs-chats.herokuapp.com/">CS-Chat Rooms</a> on heroku sever. You sure might want to take a look.</p>
 <p>This the original source from <a href ="https://www.sitepoint.com/">sitepoint</a> : https://www.sitepoint.com/create-a-chat-app-with-rails-5-actioncable-and-devise/
 
-<h3>Thanks You Guys!</h3>
+<h3>Thank You Guys!</h3>
