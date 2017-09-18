@@ -31,12 +31,6 @@
             = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
           %br
 
-          .field
-            = f.check_box :is_admin
-            %span Is Admin?
-
-          %br
-
           .actions
             = f.submit "Update", class: 'btn btn-outline-light', id: 'login-submit'
         %hr
