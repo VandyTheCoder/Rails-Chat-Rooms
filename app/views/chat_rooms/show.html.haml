@@ -1,0 +1,34 @@
+.row
+  .col-md-3.col-xs-12
+    .card
+      = image_tag 'background.jpg', class: 'card-img-top'
+      .card-body
+        %h4.card-title
+          %i.fa.fa-comments-o
+          = @chat_room.title
+
+        - if @chat_room.description.present?
+          %p.card-text= @chat_room.description 
+        - else
+          %p.card-text Thanks you for using our cs-chat room service. Please enjoy our free service. Please kindly share this to your friends.
+
+      .card-body
+        = link_to chat_rooms_path, class: 'card-link btn btn-secondary' do
+          %i.fa.fa-chevron-left
+          Back
+  .col-md-9.col-xs-12
+    .card
+      .card-header
+        %i.fa.fa-comments-o{"aria-hidden" => "true"}
+        = @chat_room.title
+      .card-body
+        #messages{"data-chat-room-id" => "#{@chat_room.id}"}
+          = render @chat_room.messages
+        %hr
+        = form_for @message, url: '#' do |f|
+          = hidden_field_tag 'chat_room_id', @chat_room.id
+          .form-group
+            = f.label :body
+            = f.text_area :body, class: 'form-control'
+            %small.text-muted From 2 to 1000 characters
+          = f.submit "Post", class: 'btn btn-info'

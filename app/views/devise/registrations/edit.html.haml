@@ -1,0 +1,42 @@
+.row.justify-content-center
+  .col-md-5.col-xs-12{:style => "margin-bottom: 15px;"}
+    .card.text-white.bg-info
+      .card-header
+        %i.fa.fa-edit{"aria-hidden" => "true"}
+        Edit #{resource_name.to_s.humanize}      
+      .card-body
+        = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+          = devise_error_messages!
+          .field
+            = f.label :email
+            %br/
+            = f.email_field :email, autofocus: true, class: 'form-control'
+          - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+            %div
+              Currently waiting confirmation for: #{resource.unconfirmed_email}
+
+          %br
+
+          .field
+            = f.label :password
+            %i (leave blank if you don't want to change it)
+            %br/
+            = f.password_field :password, autocomplete: "off", class: 'form-control'
+
+          %br
+
+          .field
+            = f.label :password_confirmation
+            %br/
+            = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
+          %br
+
+          .actions
+            = f.submit "Update", class: 'btn btn-outline-light', id: 'login-submit'
+        %hr
+        %h3 Deleting Account
+        %p
+          Unhappy to Use Our App? #{button_to "Delete Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger'}
+        = link_to :back, class: 'btn btn-secondary' do
+          %i.fa.fa-chevron-left{"aria-hidden" => "true"}
+          Back

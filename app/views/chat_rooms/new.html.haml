@@ -1,0 +1,12 @@
+.row.justify-content-center
+  .col-md-4.col-xs-12
+    .card
+      %h4.card-header
+        %i.fa.fa-plus-square{"aria-hidden" => "true"}
+        Create Chat Room
+      .card-body
+        = render 'form', comment: @chat_room
+        %br
+        = link_to chat_rooms_path, class: 'card-link btn btn-secondary' do
+          %i.fa.fa-chevron-left{"aria-hidden" => "true"} 
+          Back
