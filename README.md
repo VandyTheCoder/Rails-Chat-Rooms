@@ -1,6 +1,6 @@
 # Rails Chat Rooms
 
-This project, I created for practicing my new skill ***Rails Action Cable(Real-Time System)***.It is fun experience because I have a lot of things from this project. It is real-time chat and created by using [Ruby On Rails](http://rubyonrails.org/).
+This project, I created for practicing my new skill **Rails Action Cable(Real-Time System)**.It is fun experience because I have a lot of things from this project. It is real-time chat and created by using [Ruby On Rails](http://rubyonrails.org/).
 
 ## Getting Started
 
