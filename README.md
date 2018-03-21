@@ -1,34 +1,57 @@
-<h1>CS Chat Room</h1>
-<p>Hi, I am a student majoring Computer Science. I haved used the source of Chat Real Time Tutorial from <a href ="https://www.sitepoint.com/">sitepoint</a>. 
-<p>
-<p> > What I have updated are : </p>
-<ul>
-  <li>Interface</li>
-  <li>Security</li>
-</ul>
-<p> > What I have learned are : </p>
-<ul>
-  <li>Action Cable of Rails</li>
-  <li>Bootstrap 4.0.0beta</li>
-  <li>Deployment Web on <a href = "https://www.heroku.com">Heroku Server</a></li>
-</ul>
-<p> > Requirements before Install : </p>
-<ul>
-  <li>Ruby Version: 2.+</li>
-  <li>Rails Version 5.+</li>
-  <li>Bootstrap 4.0.0beta</li>
-  <li>Deployment Web on <a href = "https://www.heroku.com">Heroku Server</a></li>
-</ul>
-<p> > How to Install : </p>
-<ol>
-  <li>Clone the repository</li>
-  <li>Use Terminal to open the cloned folder of cs-chat rooms</li>
-  <li>$ bundle install</li>
-  <li>$ rails db:migrate</li>
-  <li>$ rails serve</li>
-  <li>Done :)</li>
-</ol>
-<p>I have hosted the <a href = "http://cs-chats.herokuapp.com/">CS-Chat Rooms</a> on heroku sever. You sure might want to take a look.</p>
-<p>This the original source from <a href ="https://www.sitepoint.com/">sitepoint</a> : https://www.sitepoint.com/create-a-chat-app-with-rails-5-actioncable-and-devise/
+# Rails Chat Rooms
 
-<h3>Thank You Guys!</h3>
+This project, I created for practicing my new skill ***Rails Action Cable(Real-Time System)***.It is fun experience because I have a lot of things from this project. It is real-time chat and created by using [Ruby On Rails](http://rubyonrails.org/).
+
+## Getting Started
+
+Before you install this project, there are some required source you need to install first before installing the project.
+
+### Prerequisites
+
+Install [Redis-Server](https://redis.io/)
+```
+sudo apt-get install redis-server
+```
+
+Running Redis-Server in Local Hosting
+```
+redis-server
+```
+
+### Installing
+
+You need to install the third party library gems from [RubyGems](https://rubygems.org/) and create the database.
+
+Install Gems
+
+```
+bundle install
+```
+
+Create database and tables
+
+```
+rails db:migrate
+```
+
+***Congratulation!*** Now, you are ready to run the project on your machine or server.
+
+## Demo Rails Chat Rooms
+
+I have hosted the demo server on [Heroku](https://www.heroku.com/)
+You can visit it here: [Rails Chat Rooms](https://cs-chats.herokuapp.com/)
+
+## Versioning
+
+Rails Chat Rooms' Version is ***1.9.4***.
+
+## Authors
+
+* **Vandy Sodanheang** - *Initial work* - [Web and Mobile Developer](https://www.linkedin.com/in/vandy-sodanheang-368410113/)
+* **Chim Kanitha** - *Co-initial work* - [Web and Mobile Developer](https://www.linkedin.com/in/kanitha-chim-a5b487b9/)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
