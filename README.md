@@ -39,7 +39,7 @@ rails db:migrate
 ## Demo Rails Chat Rooms
 
 I have hosted the demo server on [Heroku](https://www.heroku.com/)
-You can visit it here: [Rails Chat Rooms](https://cs-chats.herokuapp.com/)
+You can visit it here: [Rails Chat Rooms](https://rails-chat-rooms.herokuapp.com/)
 
 ## Versioning
 
