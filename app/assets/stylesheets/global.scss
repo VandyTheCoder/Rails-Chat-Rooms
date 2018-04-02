@@ -17,11 +17,16 @@ a
 }
 .card-text
 {
-  color: #777777; 
+  color: #ffffff;
+}
+
+.chat-room-title{
+  background-color: #17a2b8;
+  color: #ffffff;
 }
 h1
 {
-  margin-top: 1.5rem;
+  margin-top: 0rem;
   margin-bottom: 1.5rem;
 }
 
@@ -65,4 +70,31 @@ footer {
 .card
 {
   margin-bottom: 15px;
+}
+
+.card-body-login{
+  padding-bottom: 0px;
+  .devise-action{
+    margin-top: 50px;
+    margin-bottom: 15px;
+    float: right;
+  }
+}
+
+.card-body-signup{
+  padding-bottom: 0px;
+  .devise-action{
+    margin-top: 12px;
+    margin-bottom: 15px;
+    float: right;
+  }
+}
+
+#error_explanation{
+  h2{
+    font-size: 1rem;
+  }
+  li{
+    font-size: 0.7rem;
+  }
 }
