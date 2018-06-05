@@ -3,14 +3,12 @@
     .container
       .row
         .col-md-1{style: 'padding-top: 5px'}
-          = gravatar_for message.user
+          = image_tag "user.png", size: '50x50'
         .col-md-11
-          %span.text-muted
-            = message.user.name
-          %br
-          %span.text-muted
-            = message.timestamp
-          %hr
+          %p.actors.text-muted
+            %b= message.user.name.capitalize
+            %span.text-muted{style: "float: right"}
+              = time_ago_in_words(message.timestamp)
+          %hr.divider
           %p.card-text{style: 'margin-bottom: 15px'}
             = message.body
-%br/
