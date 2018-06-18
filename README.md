@@ -34,6 +34,18 @@ Create database and tables
 rails db:migrate
 ```
 
+Run Redis-Server (Open Another Terminal)
+
+```
+redis-server
+```
+
+Run Rails Application
+
+```
+rails server
+```
+
 ***Congratulation!*** Now, you are ready to run the project on your machine or server.
 
 ## Demo Rails Chat Rooms
